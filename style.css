@@ -1,0 +1,40 @@
+/* general style*/
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  margin: 20px;
+  background-color: lightgrey;
+}
+/* links*/
+
+[href] {
+  color: red;
+}
+
+/*Headlines*/
+.head {
+  padding: 0px 250px 5px 200px;
+  font-size: 30px;
+}
+
+h1 {
+  object-position: 30px;
+  background-color: darkred;
+  color: white;
+}
+
+h2 {
+  border: 2px solid black;
+}
+h3 {
+  color: darkred;
+}
+
+/*Footer*/
+
+.foot {
+  color: white;
+  border: 5px solid black;
+  background-color: gray;
+}
