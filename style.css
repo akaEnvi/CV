@@ -1,34 +1,52 @@
 /* general style*/
-
 body {
+  padding: 0px 250px 0px 250px;
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
   margin: 20px;
   background-color: lightgrey;
 }
-/* links*/
 
-[href] {
+/* links*/
+a {
+  background-color: white;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  background-color: black;
+  color: white;
+}
+a:active {
+  background-color: black;
   color: red;
 }
 
 /*Headlines*/
 .head {
-  padding: 0px 250px 5px 200px;
+  padding: 0px 500px 50px 500px;
   font-size: 30px;
 }
 
 h1 {
-  object-position: 30px;
-  background-color: darkred;
+  background-color: black;
   color: white;
 }
-
 h2 {
-  border: 2px solid black;
+  padding: 0px 500px 0px 100px;
 }
 h3 {
   color: darkred;
+}
+
+/*text*/
+::selection {
+  color: white;
+  background-color: darkred;
 }
 
 /*Footer*/
