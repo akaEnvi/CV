@@ -28,7 +28,7 @@ html {
 
 body {
   margin: 0;
-  --main-bgcolor: rgb(169, 10, 10);
+  --main-bgcolor: rgb(131, 2, 2);
   --page-bgcolor: white;
   --link-hover: red;
   --link-activate: white;
@@ -47,15 +47,17 @@ body {
 
 ::selection {
   background-color: var(--main-bgcolor);
+  color: var(--link-activate);
 }
 
 /* Layout */
 .bghead {
   background-image: linear-gradient(var(--main-bgcolor), var(--page-bgcolor));
-  background-size: header;
+  padding: 5rem;
 }
 
 .head {
+  color: var(--page-text-color);
   padding: 1rem;
   text-align: center;
 }
@@ -66,13 +68,22 @@ body {
   margin: 0 auto;
 }
 
+article ~ article {
+  border-top: 0.2rem solid var(--page-text-color);
+}
+
 /* Links */
+
 a {
+  color: crimson;
   transition: color 0.5s;
 }
 
 a:hover {
   background-color: var(--link-bgcolor);
+  padding: 9px;
+  font-size: 30px;
+  border-radius: 10px;
   color: var(--link-hover);
 }
 
@@ -88,5 +99,40 @@ a:active {
     padding: 0.5rem;
     background-color: var(--page-bgcolor);
     border-radius: 0.1rem;
+  }
+}
+
+/* Footer */
+.foot {
+  text-align: center;
+  font-size: 16px;
+  background-image: linear-gradient(var(--page-bgcolor), var(--main-bgcolor));
+  background-size: footer;
+  padding: 5em;
+}
+
+footer a {
+  color: white;
+}
+
+a ~ a {
+  margin-left: 30px;
+}
+
+.ca > a {
+  margin-left: 0px;
+  transition: color 0s;
+}
+.ca > a:hover {
+  background-color: var(--page-text-color);
+  padding: 0px;
+  font-size: 0px;
+  border-radius: 0px;
+}
+
+/* other */
+@media print {
+  .noprint {
+    display: none;
   }
 }
