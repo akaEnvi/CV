@@ -1,80 +1,92 @@
-/* general style*/
-body {
-  padding: 0px 250px 0px 250px;
+/* general styling*/
+*,
+*::before *::after {
+  box-sizing: border-box;
+}
+html {
   font-family: "Courier New", Courier, monospace;
   font-size: 16px;
-  margin: 20px;
-  background-color: lightgrey;
 }
 
-/* links*/
-a {
-  background-color: white;
-}
-a:link {
-  color: black;
-}
-a:visited {
-  color: red;
-}
-a:hover {
-  background-color: darkred;
-  color: white;
-}
-a:active {
-  background-color: black;
-  color: red;
+@media screen and (max-width: 786px) {
+  html {
+    font-size: 0.8em;
+  }
 }
 
-/*Headlines*/
-.head {
-  background-color: crimson;
-}
-.head {
-  padding: 0px 300px 50px 500px;
-  font-size: 30px;
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 1.1em;
+  }
 }
 
-h1 {
-  background-color: black;
-  color: white;
-  width: 565px;
-  height: 60px;
-}
-h1::before {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-color: red;
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 1.5em;
+  }
 }
 
-h1::after {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  left: 0;
-  background-color: red;
-}
-h2 {
-  padding: 0px 500px 0px 100px;
-}
-h3 {
-  color: darkred;
+body {
+  margin: 0;
+  --main-bgcolor: rgb(169, 10, 10);
+  --page-bgcolor: white;
+  --link-hover: red;
+  --link-activate: white;
+  --link-bgcolor: black;
+  --page-text-color: black;
 }
 
-/*text*/
+@media screen and (prefers-color-schema: dark) {
+  body {
+    --page-bgcolor: black;
+    --page-text-color: white;
+    --link-activate: black;
+    --link-bgcolor: white;
+  }
+}
+
 ::selection {
-  color: white;
-  background-color: darkred;
+  background-color: var(--main-bgcolor);
 }
 
-/*Footer*/
+/* Layout */
+.bghead {
+  background-image: linear-gradient(var(--main-bgcolor), var(--page-bgcolor));
+  background-size: header;
+}
 
-.foot {
-  font-size: 80%;
-  color: white;
-  border: 5px solid black;
-  background-color: gray;
+.head {
+  padding: 1rem;
+  text-align: center;
+}
+
+.main {
+  padding: 2rem;
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+/* Links */
+a {
+  transition: color 0.5s;
+}
+
+a:hover {
+  background-color: var(--link-bgcolor);
+  color: var(--link-hover);
+}
+
+a:active {
+  color: var(--link-activate);
+}
+
+@media screen and (min-width: 992px) {
+  aside {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    background-color: var(--page-bgcolor);
+    border-radius: 0.1rem;
+  }
 }

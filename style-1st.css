@@ -1,0 +1,94 @@
+/* general style*/
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  background-color: lightgrey;
+}
+
+/*main*/
+main {
+  margin: 20px;
+  padding: 0 250px 0 250px;
+  position: relative;
+  top: 50px;
+}
+
+/* links*/
+
+a {
+  background-color: white;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  background-color: darkred;
+  color: white;
+}
+a:active {
+  background-color: black;
+  color: red;
+}
+
+/*Headlines*/
+
+.head {
+  height: 200px;
+  width: 100vw;
+  background-color: crimson;
+  position: sticky;
+  padding: 48px 16px;
+  padding-top: 72px;
+  text-align: left;
+  border-radius: 5px;
+  position: sticky;
+  top: 0px;
+}
+
+.hire-me {
+  position: absolute;
+  right: 76px;
+  top: 26px;
+  padding: 8px;
+  border-radius: 4px;
+  background: darkred;
+  color: white;
+}
+
+h1 {
+  position: absolute;
+  font-size: 3em;
+  right: 910px;
+  bottom: 130px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 2em;
+  padding: 0px 500px 0px 100px;
+}
+h3 {
+  color: darkred;
+}
+
+/*text*/
+::selection {
+  color: white;
+  background-color: darkred;
+}
+
+/*Footer*/
+
+.foot {
+  font-size: 80%;
+  color: white;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: gray;
+}
