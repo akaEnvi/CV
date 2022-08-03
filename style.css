@@ -25,15 +25,19 @@ html {
     font-size: 1.5em;
   }
 }
+html {
+  --main-bgcolor: rgb(131, 2, 2);
+  --page-bgcolor: rgb(191, 188, 188);
+  --link-hover: red;
+  --link-activate: darkgray;
+  --link-bgcolor: black;
+  --page-text-color: black;
+  --selection-color: white;
+}
 
 body {
   margin: 0;
-  --main-bgcolor: rgb(131, 2, 2);
-  --page-bgcolor: white;
-  --link-hover: red;
-  --link-activate: white;
-  --link-bgcolor: black;
-  --page-text-color: black;
+  background-color: var(--page-bgcolor);
 }
 
 @media screen and (prefers-color-schema: dark) {
@@ -47,12 +51,13 @@ body {
 
 ::selection {
   background-color: var(--main-bgcolor);
-  color: var(--link-activate);
+  color: var(--selection-color);
 }
 
 /* Layout */
 .bghead {
-  background-image: linear-gradient(var(--main-bgcolor), var(--page-bgcolor));
+  background-color: var(--page-bgcolor);
+  background-image: linear-gradient(var(--main-bgcolor), transparent);
   padding: 5rem;
 }
 
@@ -76,7 +81,7 @@ article ~ article {
 
 a {
   color: crimson;
-  transition: color 0.5s;
+  transition: 0.5s;
 }
 
 a:hover {
@@ -106,7 +111,8 @@ a:active {
 .foot {
   text-align: center;
   font-size: 16px;
-  background-image: linear-gradient(var(--page-bgcolor), var(--main-bgcolor));
+  background-color: var(--page-bgcolor);
+  background-image: linear-gradient(transparent, var(--main-bgcolor));
   background-size: footer;
   padding: 5em;
 }
@@ -128,6 +134,11 @@ a ~ a {
   padding: 0px;
   font-size: 0px;
   border-radius: 0px;
+}
+
+.contactme {
+  font-size: 30px;
+  color: white;
 }
 
 /* other */
