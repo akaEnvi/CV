@@ -55,6 +55,18 @@ body {
 }
 
 /* Layout */
+.main {
+  padding: 2rem;
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+article ~ article {
+  border-top: 0.2rem solid var(--page-text-color);
+}
+
+/* Header */
+
 .bghead {
   background-color: var(--page-bgcolor);
   background-image: linear-gradient(var(--main-bgcolor), transparent);
@@ -67,29 +79,38 @@ body {
   text-align: center;
 }
 
-.main {
-  padding: 2rem;
-  max-width: 80ch;
-  margin: 0 auto;
+.hire-me {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+  background: var(--page-bgcolor);
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
-article ~ article {
-  border-top: 0.2rem solid var(--page-text-color);
+.head:hover .hire-me,
+.head:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
 }
-
 /* Links */
 
 a {
   color: crimson;
+  transform-origin: 0% 0%;
   transition: 0.5s;
 }
 
 a:hover {
   background-color: var(--link-bgcolor);
+  color: var(--link-hover);
+
   padding: 9px;
   font-size: 30px;
   border-radius: 10px;
-  color: var(--link-hover);
 }
 
 a:active {
@@ -127,13 +148,16 @@ a ~ a {
 
 .ca > a {
   margin-left: 0px;
-  transition: color 0s;
+  transition: 0.5s;
 }
+
 .ca > a:hover {
-  background-color: var(--page-text-color);
-  padding: 0px;
-  font-size: 0px;
-  border-radius: 0px;
+  background-color: var(--link-bgcolor);
+  color: var(--link-hover);
+
+  padding: 9px;
+  font-size: 30px;
+  border-radius: 10px;
 }
 
 .contactme {
